@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: kt-pd-test
+Version: 0.0.2
+Summary: A small example package
+Home-page: https://github.com/kaylathomas/pd-test
+Author: KayLa Thomas
+Author-email: kaylathomas.dev@gmail.com
+Project-URL: Bug Tracker, https://github.com/kaylathomas/pd-test/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# PyDate
+
+This is a library is an almost one-to-one conversion of Ruby on Rails' useful date helper methods for use in Python libraries.
+
+For now, while it's meant to not be announced publicly, it's simply aliased as "pd-test".
