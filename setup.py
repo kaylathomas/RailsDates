@@ -2,13 +2,13 @@ from distutils.core import setup
 setup(
   name = 'RailsDates',
   packages = ['RailsDates'],
-  version = '0.4',
+  version = '0.5',
   license='MIT',
   description = 'A library that allows Python devs to mimic the useful date methods available in Ruby on Rails.',
   author = 'KayLa Thomas',
   author_email = 'kaylathomas.dev@gmail.com',
   url = 'https://github.com/kaylathomas/RailsDates',
-  download_url = 'https://github.com/kaylathomas/RailsDates/archive/refs/tags/v_0.4.tar.gz',
+  download_url = 'https://github.com/kaylathomas/RailsDates/archive/refs/tags/v_0.5.tar.gz',
   keywords = ['ruby on rails', 'ruby', 'python', 'date library'],
   install_requires=[],
   classifiers=[
