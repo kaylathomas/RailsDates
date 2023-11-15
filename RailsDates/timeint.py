@@ -4,46 +4,48 @@ class TimeDeltaBuilder:
     """Internal class to build timedelta objects based on the called attribute."""
     def __init__(self, value):
         self.value = value
-        self.delta = timedelta()
 
-    @property
+    def minute(self):
+        return timedelta(minutes=self.value)
+
     def minutes(self):
-        self.delta += timedelta(minutes=self.value)
-        return self
+        return self.minute()
 
-    @property
+    def hour(self):
+        return timedelta(hours=self.value)
+
     def hours(self):
-        self.delta += timedelta(hours=self.value)
-        return self
+        return self.hour()
 
-    @property
+    def day(self):
+        return timedelta(days=self.value)
+
     def days(self):
-        self.delta += timedelta(days=self.value)
-        return self
+        return self.day()
 
-    @property
+    def week(self):
+        return timedelta(weeks=self.value)
+
     def weeks(self):
-        self.delta += timedelta(weeks=self.value)
-        return self
+        return self.week()
 
-    @property
+    def month(self):
+        return timedelta(days=self.value * 30)  # approximation
+
     def months(self):
-        self.delta += timedelta(days=self.value * 30)  # Approximation
-        return self
+        return self.month()
 
-    @property
+    def decade(self):
+        return timedelta(days=self.value * 365.25 * 10)  # approximation, considering leap years
+
     def decades(self):
-        self.delta += timedelta(days=self.value * 365.25 * 10)  # Approximation, considering leap years
-        return self
+        return self.decade()
 
-    @property
+    def leapyear(self):
+        return timedelta(days=self.value * 366)  # approximation for leap years
+
     def leapyears(self):
-        # An approximation assuming leap years occur almost every 4 years
-        self.delta += timedelta(days=self.value * 366)
-        return self
-
-    def ago(self):
-        return datetime.utcnow() - self.delta
+        return self.leapyear()
 
 class TimeInt:
     def __init__(self, value):
@@ -52,29 +54,33 @@ class TimeInt:
         self.value = value
 
     @property
-    def minutes(self):
-        return TimeDeltaBuilder(self.value).minutes
+    def minute(self):
+        return TimeDeltaBuilder(self.value).minute()
 
     @property
-    def hours(self):
-        return TimeDeltaBuilder(self.value).hours
+    def hour(self):
+        return TimeDeltaBuilder(self.value).hour()
 
     @property
-    def days(self):
-        return TimeDeltaBuilder(self.value).days
+    def day(self):
+        return TimeDeltaBuilder(self.value).day()
 
     @property
-    def weeks(self):
-        return TimeDeltaBuilder(self.value).weeks
+    def week(self):
+        return TimeDeltaBuilder(self.value).week()
 
     @property
-    def months(self):
-        return TimeDeltaBuilder(self.value).months
+    def month(self):
+        return TimeDeltaBuilder(self.value).month()
 
     @property
-    def decades(self):
-        return TimeDeltaBuilder(self.value).decades
+    def decade(self):
+        return TimeDeltaBuilder(self.value).decade()
 
     @property
-    def leapyears(self):
-        return TimeDeltaBuilder(self.value).leapyears
+    def leapyear(self):
+        return TimeDeltaBuilder(self.value).leapyear()
+
+    @staticmethod
+    def ago(self):
+        return datetime.utcnow() - self.value
