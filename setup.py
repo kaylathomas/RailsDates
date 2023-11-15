@@ -8,7 +8,7 @@ setup(
   author = 'KayLa Thomas',
   author_email = 'kaylathomas.dev@gmail.com',
   url = 'https://github.com/kaylathomas/RailsDates',
-  download_url = 'https://github.com/kaylathomas/RailsDates/archive/refs/tags/v_0.1.tar.gz',    # I explain this later on
+  download_url = 'https://github.com/kaylathomas/RailsDates/archive/refs/tags/v_0.2.tar.gz',    # I explain this later on
   keywords = ['ruby on rails', 'ruby', 'python', 'date library'],   # Keywords that define your package best
   install_requires=[],
   classifiers=[
