@@ -47,6 +47,9 @@ class TimeDeltaBuilder:
     def leapyears(self):
         return self.leapyear()
 
+    def ago(self):
+        return datetime.utcnow() - self.value()
+
 class TimeInt:
     def __init__(self, value):
         if not isinstance(value, int):
@@ -55,32 +58,28 @@ class TimeInt:
 
     @property
     def minute(self):
-        return TimeDeltaBuilder(self.value).minute()
+        return TimeDeltaBuilder(self.value)
 
     @property
     def hour(self):
-        return TimeDeltaBuilder(self.value).hour()
+        return TimeDeltaBuilder(self.value)
 
     @property
     def day(self):
-        return TimeDeltaBuilder(self.value).day()
+        return TimeDeltaBuilder(self.value)
 
     @property
     def week(self):
-        return TimeDeltaBuilder(self.value).week()
+        return TimeDeltaBuilder(self.value)
 
     @property
     def month(self):
-        return TimeDeltaBuilder(self.value).month()
+        return TimeDeltaBuilder(self.value)
 
     @property
     def decade(self):
-        return TimeDeltaBuilder(self.value).decade()
+        return TimeDeltaBuilder(self.value)
 
     @property
     def leapyear(self):
-        return TimeDeltaBuilder(self.value).leapyear()
-
-    @staticmethod
-    def ago(self):
-        return datetime.utcnow() - self.value
+        return TimeDeltaBuilder(self.value)
