@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
   name = 'RailsDates',
   packages = ['RailsDates'],
-  version = '0.1',
+  version = '0.2',
   license='MIT',
   description = 'A library that allows Python devs to mimic the useful date methods available in Ruby on Rails.',
   author = 'KayLa Thomas',
