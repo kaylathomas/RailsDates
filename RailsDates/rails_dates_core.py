@@ -1,6 +1,6 @@
 from datetime import datetime
 
-class PyDate:
+class RailsDates:
     
     @staticmethod
     def full_day_of_week(date):
